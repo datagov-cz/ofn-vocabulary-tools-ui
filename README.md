@@ -28,3 +28,11 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Development
+
+To develop the frontend, one can use dockerized version of backend from file [docker-compose.yml](./docker-compose.yml), using following steps:
+1) `docker-compose up -d`
+2) `npm install`
+3) `npm run dev`
+4) access the application from `http://http://localhost:5173/`

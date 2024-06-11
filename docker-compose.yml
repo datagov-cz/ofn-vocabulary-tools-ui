@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  ofn-vocabulary-tools:
+    build:
+      context: .
+    ports:
+      - 1235:80
+    environment:
+      CONTEXT:
+  ofn-vocabulary-tools-server:
+    image: ghcr.io/datagov-cz/ofn-vocabulary-tools/al-ofn-vocabulary-tools-server:latest
+    ports:
+      - 5000:8080
+

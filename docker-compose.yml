@@ -6,7 +6,7 @@ services:
     ports:
       - 1235:80
     environment:
-      CONTEXT:
+      API_URL: "http://localhost:5000/api"
   ofn-vocabulary-tools-server:
     image: ghcr.io/datagov-cz/ofn-vocabulary-tools/ofn-vocabulary-tools-server:latest
     ports:

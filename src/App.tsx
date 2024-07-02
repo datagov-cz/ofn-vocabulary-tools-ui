@@ -1,3 +1,6 @@
+// @ts-ignore
+import { API_URL } from "../config";
+
 function App() {
   return (
     <div>
@@ -12,7 +15,7 @@ function App() {
               input.files[0]
                 .text()
                 .then((text) => {
-                  fetch("http://127.0.0.1:5000/api/test", {
+                  fetch(API_URL + "/test", {
                     method: "POST",
                     headers: {
                       "Content-Type": "text/plain",

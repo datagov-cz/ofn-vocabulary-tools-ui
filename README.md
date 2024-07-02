@@ -29,6 +29,10 @@ export default {
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
+## Deployment to slovník.gov.cz
+
+The specific configuration needed for deployment to slovník.gov.cz is available at [deploy/datagov-cz directory](./deploy/datagov-cz).
+
 ## Development
 
 To develop the frontend, one can use dockerized version of backend from file [docker-compose.yml](./docker-compose.yml), using following steps:

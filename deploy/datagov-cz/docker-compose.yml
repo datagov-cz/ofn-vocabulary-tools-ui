@@ -1,0 +1,21 @@
+# docker-compose --env-file=.env.local up
+
+version: "3.9"
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/error.html:/usr/share/nginx/html/error.html
+    ports:
+      - "127.0.0.1:${INTERNAL_HOST_PORT:-1235}:80"
+    restart: always
+    depends_on:
+      - ofn-vocabulary-tools
+      - ofn-vocabulary-tools-server
+  ofn-vocabulary-tools:
+    image: ghcr.io/datagov-cz/ofn-vocabulary-tools-ui/ofn-vocabulary-tools:latest
+    environment:
+      API_URL: ${API_URL}
+  ofn-vocabulary-tools-server:
+    image: ghcr.io/datagov-cz/ofn-vocabulary-tools/ofn-vocabulary-tools-server:latest
